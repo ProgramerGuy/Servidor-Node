@@ -14,7 +14,7 @@ var http = require("http");
 
 web.use(parcero.urlencoded());
 
-server = web.listen(8080, function (req,res){
+server = web.listen(web.listen('port'), function (req,res){
 	console.log("Servidor Corriendo.... :D")
 
 });
