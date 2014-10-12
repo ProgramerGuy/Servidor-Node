@@ -14,7 +14,7 @@ var http = require("http");
 
 web.use(parcero.urlencoded());
 
-server = web.listen(web.listen('port'), function (req,res){
+server = web.listen(8080, function (req,res){
 	console.log("Servidor Corriendo.... :D")
 
 });
@@ -41,3 +41,5 @@ web.post("/entrar", function (req, res){
 	}
 
 });
+
+web.use(express.static(_dirname + "/public"));
