@@ -19,7 +19,7 @@ server = web.listen(8080, function (req,res){
 
 });
 
-web.get("/public", function (req, res){
+web.get("/public/index", function (req, res){
 	res.sendfile('form.html');
 });
 
