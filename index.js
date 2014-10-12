@@ -38,6 +38,7 @@ web.post("/entrar", function (req, res){
 	else
 	{
 		res.send("Largate Vago!")
+		console.log("Logeo erroneo con el usuario: " + req.body.usuario);
 	}
 
 });
