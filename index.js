@@ -14,12 +14,12 @@ var http = require("http");
 
 web.use(parcero.urlencoded());
 
-server = web.listen(8080, function (req,res){
+server = web.listen(process.env.PORT || 8080, function (req,res){
 	console.log("Servidor Corriendo.... :D")
 
 });
 
-web.get("/public/index", function (req, res){
+web.get("/", function (req, res){
 	res.sendfile('form.html');
 });
 
