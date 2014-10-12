@@ -19,8 +19,8 @@ server = web.listen(process.env.PORT || 8080, function (req,res){
 
 });
 
-web.get("/public/index", function (req, res){
-	res.sendfile('form.html');
+web.get("/", function (req, res){
+	res.sendfile('public/form.html');
 });
 
 web.get("/prueba", function (req, res){
