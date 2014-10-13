@@ -26,6 +26,7 @@ web.get("/", function (req, res){
 web.get("/prueba", function (req, res){
 	res.send("Tu nombre es " +"<strong>" + req.query.nombre + "</strong>" +
 		 " Y tu edad es " + req.query.edad) ;
+	res.sendfile("PlanoZoo.jpg")
 });
 
 web.post("/entrar", function (req, res){
