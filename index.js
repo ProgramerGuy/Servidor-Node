@@ -32,7 +32,7 @@ web.post("/entrar", function (req, res){
 
 	if(req.body.usuario == basededatos.usuario && req.body.contraseña == basededatos.password)
 	{
-		 res.send("Entraste al formulario secreto");
+		 res.sendfile("public/entrar.html");
 		 console.log("Logeo del usuario: " + req.body.usuario);
 	}
 	else
