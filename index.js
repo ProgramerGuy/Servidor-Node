@@ -1,4 +1,4 @@
-console.log("Arrancando Servidor...");
+console.log("Arrancando Servidor... :b");
 var nombre = "Raul";
 
 var basededatos = {
@@ -10,12 +10,13 @@ var express = require('express');
 var web = express();
 var server;
 var parcero = require("body-parser");
-var http = require("http");
 
 web.use(parcero.urlencoded());
 
+
+
 server = web.listen(process.env.PORT || 8080, function (req,res){
-	console.log("Servidor Corriendo.... :D")
+	console.log("Servidor Corriendo en el puerto " + process.env.PORT)
 
 });
 
@@ -26,14 +27,13 @@ web.get("/", function (req, res){
 web.get("/prueba", function (req, res){
 	res.send("Tu nombre es " +"<strong>" + req.query.nombre + "</strong>" +
 		 " Y tu edad es " + req.query.edad) ;
-	res.sendfile("PlanoZoo.jpg")
 });
 
 web.post("/entrar", function (req, res){
 
 	if(req.body.usuario == basededatos.usuario && req.body.contraseña == basededatos.password)
 	{
-		 res.sendfile("public/entrar.html");
+		 res.sendfile("Portafolio/templates/portafolio.html");
 		 console.log("Logeo del usuario: " + req.body.usuario);
 	}
 	else
